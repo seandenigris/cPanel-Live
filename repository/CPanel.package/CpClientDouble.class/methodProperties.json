@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"contentReader:" : "SeanDeNigris 7/14/2015 14:52",
+		"get:" : "SeanDeNigris 7/14/2015 14:56",
+		"getExpectations" : "SeanDeNigris 7/14/2015 14:42",
+		"shouldGet:" : "SeanDeNigris 7/14/2015 14:43",
+		"shouldGet:andReturn:" : "SeanDeNigris 7/14/2015 14:43" } }

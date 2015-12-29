@@ -1,15 +1,13 @@
 {
 	"category" : "CPanel",
 	"classinstvars" : [
-		"clientClassForTesting" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"url",
-		"securityToken",
-		"client" ],
-	"name" : "CPanel",
+		"addressString" ],
+	"name" : "CpEmailAddress",
 	"pools" : [
 		 ],
 	"super" : "Object",

@@ -1,15 +1,14 @@
 {
-	"category" : "CPanel",
+	"category" : "CPanel-Specification",
 	"classinstvars" : [
-		"clientClassForTesting" ],
+		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"url",
-		"securityToken",
-		"client" ],
-	"name" : "CPanel",
+		"getExpectations",
+		"contentReader" ],
+	"name" : "CpClientDouble",
 	"pools" : [
 		 ],
 	"super" : "Object",

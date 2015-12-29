@@ -1,0 +1,19 @@
+{
+	"category" : "CPanel-Specification",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"url",
+		"securityToken",
+		"cPanel",
+		"client",
+		"domain",
+		"urlListingForwarders" ],
+	"name" : "CPanelSpecification",
+	"pools" : [
+		 ],
+	"super" : "BabyPhexample",
+	"type" : "normal" }

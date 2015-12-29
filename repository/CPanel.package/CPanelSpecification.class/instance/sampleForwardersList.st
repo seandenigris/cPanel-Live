@@ -1,0 +1,3 @@
+as yet unclassified
+sampleForwardersList
+	^ '{"messages":null,"errors":null,"status":1,"metadata":{"transformed":1},"data":[{"html_dest":"fakeaddress1@mydomain.com","dest":"fakeaddress1@mydomain.com","html_forward":"target@mydomain.com","forward":"target@mydomain.com","uri_forward":"target%40mydomain.com","uri_dest":"fakeaddress1%40mydomain.com"},{"html_dest":"fakeaddress2@mydomain.com","dest":"fakeaddress2@mydomain.com","html_forward":"target@mydomain.com","forward":"target@mydomain.com","uri_forward":"target%40mydomain.com","uri_dest":"fakeaddress2%40mydomain.com"}]}'.

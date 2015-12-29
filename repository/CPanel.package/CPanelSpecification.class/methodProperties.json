@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"sampleForwardersList" : "SeanDeNigris 7/14/2015 14:51",
+		"setUp" : "SeanDeNigris 7/14/2015 14:47",
+		"testEmailAddForwarder" : "SeanDeNigris 7/14/2015 14:05",
+		"testEmailHasForwarder" : "SeanDeNigris 7/14/2015 14:57",
+		"testEmailHasNoSuchForwarder" : "SeanDeNigris 7/14/2015 14:57",
+		"testEmailListForwarders" : "SeanDeNigris 7/14/2015 14:55" } }

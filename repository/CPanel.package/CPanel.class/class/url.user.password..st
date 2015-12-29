@@ -1,7 +1,7 @@
 instance creation
-url: aUrl user: username password: password
+url: aUrlOrString user: username password: password
 
 	^ self new
-		url: aUrl;
+		url: aUrlOrString asUrl;
 		loginAs: username withPassword: password;
 		yourself

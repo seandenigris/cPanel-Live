@@ -1,7 +1,7 @@
 private
 loginAs: username withPassword: password 
 
-	| json |
+	| json rawSecurityToken |
 	json := self client
 		path: '/login/';
 		queryAt: 'login_only' put: '1';
@@ -9,4 +9,5 @@ loginAs: username withPassword: password
 		formAt: 'pass' put: password;
 		contentReader: [ :e | NeoJSONReader fromString: e contents ];
 		post.
-	securityToken := json at: 'security_token'
+	rawSecurityToken := json at: 'security_token'.
+	securityToken := rawSecurityToken allButFirst: '/' size.
