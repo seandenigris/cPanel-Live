@@ -1,0 +1,14 @@
+{
+	"category" : "CPanel",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CpError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }
