@@ -1,15 +1,18 @@
 {
-	"class" : {
-		"menuCommandOn:" : "SeanDeNigris 8/6/2015 18:08",
-		"openForm" : "SeanDeNigris 8/6/2015 18:03" },
 	"instance" : {
-		"connect" : "SeanDeNigris 8/6/2015 17:54",
-		"descriptionPassword" : "SeanDeNigris 8/6/2015 17:48",
-		"descriptionUrl" : "SeanDeNigris 8/6/2015 17:47",
-		"descriptionUsername" : "SeanDeNigris 8/6/2015 17:47",
-		"password" : "SeanDeNigris 8/6/2015 17:49",
-		"password:" : "SeanDeNigris 8/6/2015 17:49",
-		"url" : "SeanDeNigris 8/6/2015 17:49",
-		"url:" : "SeanDeNigris 8/6/2015 17:49",
 		"username" : "SeanDeNigris 8/6/2015 17:49",
-		"username:" : "SeanDeNigris 8/6/2015 17:49" } }
+		"url" : "SeanDeNigris 8/6/2015 17:49",
+		"descriptionUrl" : "SeanDeNigris 8/6/2015 17:47",
+		"descriptionPassword" : "SeanDeNigris 8/6/2015 17:48",
+		"password" : "SeanDeNigris 8/6/2015 17:49",
+		"connect" : "SeanDeNigris 8/6/2015 17:54",
+		"descriptionUsername" : "SeanDeNigris 8/6/2015 17:47",
+		"url:" : "SeanDeNigris 8/6/2015 17:49",
+		"password:" : "SeanDeNigris 8/6/2015 17:49",
+		"username:" : "SeanDeNigris 8/6/2015 17:49"
+	},
+	"class" : {
+		"openForm" : "SeanDeNigris 8/6/2015 18:03",
+		"menuCommandOn:" : "SeanDeNigris 8/6/2015 18:08"
+	}
+}

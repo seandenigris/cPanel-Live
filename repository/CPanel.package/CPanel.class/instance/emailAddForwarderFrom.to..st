@@ -9,4 +9,6 @@ emailAddForwarderFrom: source to: target
 	addForwarderUrl := self baseApiUrl / 'Email' / 'add_forwarder' ? ('email' -> sourceUser) & ('domain' -> sourceDomain) & ('fwdopt' -> 'fwd') & ('fwdemail' -> target).
 	self client
 		contentReader: nil;
-		get: addForwarderUrl
+		get: addForwarderUrl.
+	doesExist := self hasForwarderFrom: source to: target.
+	doesExist ifFalse: [ CpError signal: 'Failed to create forwarder from ', source, ' to ', target ].

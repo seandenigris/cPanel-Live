@@ -1,14 +1,13 @@
 {
-	"category" : "CPanel",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"addressString" ],
-	"name" : "CpEmailAddress",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "CPanel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"addressString"
+	],
+	"name" : "CpEmailAddress",
+	"type" : "normal"
+}

@@ -1,15 +1,14 @@
 {
-	"category" : "CPanel-Specification",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "CPanel-Specification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"getExpectations",
-		"contentReader" ],
+		"contentReader"
+	],
 	"name" : "CpClientDouble",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

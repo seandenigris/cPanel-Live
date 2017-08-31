@@ -1,16 +1,15 @@
 {
-	"category" : "CPanel",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "CPanel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"url",
 		"username",
-		"password" ],
+		"password"
+	],
 	"name" : "CPanelLogin",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

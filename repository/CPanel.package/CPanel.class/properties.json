@@ -1,16 +1,17 @@
 {
+	"commentStamp" : "SeanDeNigris 8/18/2015 12:47",
+	"super" : "Object",
 	"category" : "CPanel",
 	"classinstvars" : [
-		"clientClassForTesting" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "SeanDeNigris 8/18/2015 12:47",
+		"clientClassForTesting"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"url",
 		"securityToken",
-		"client" ],
+		"client"
+	],
 	"name" : "CPanel",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}
