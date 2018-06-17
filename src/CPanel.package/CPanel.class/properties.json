@@ -6,8 +6,11 @@
 		"clientClassForTesting"
 	],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"Servers"
+	],
 	"instvars" : [
+		"nickname",
 		"url",
 		"securityToken",
 		"client"

@@ -1,8 +1,8 @@
 magritte
-descriptionUsername
+descriptionNickname
 	<magritteDescription>
 
 	^ MAStringDescription new
-			accessor: #username;
+			accessor: #nickname;
 			priority: 200;
 			yourself

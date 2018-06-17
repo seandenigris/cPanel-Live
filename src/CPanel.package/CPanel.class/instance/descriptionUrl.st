@@ -3,6 +3,7 @@ descriptionUrl
 	<magritteDescription>
 
 	^ MAUrlDescription new
-			accessor: #(cPanel url);
+			accessor: #url;
+			label: 'Url';
 			priority: 100;
 			yourself

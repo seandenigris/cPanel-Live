@@ -1,3 +1,5 @@
-private
+accessing
 securityToken
-	^ securityToken
+	^ securityToken ifNil: [ 
+		self logIn. 
+		securityToken ]

@@ -2,8 +2,6 @@ connecting
 openForm
 	<script>
 
-	self new asMagritteMorph
-		addButtons;
-		addWindow;
-		onAnswer: [ :login | login connect ];
-		openInWorld
+	self new openFormAnswering: [ :login | 
+		login connect. 
+		login cPanel inspect ]

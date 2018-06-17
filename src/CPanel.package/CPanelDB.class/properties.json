@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SpFileDatabase",
+	"category" : "CPanel-Persistence",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CPanelDB",
+	"type" : "normal"
+}
