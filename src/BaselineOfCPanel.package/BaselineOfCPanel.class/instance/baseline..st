@@ -9,15 +9,11 @@ baseline: spec
 					className: #ConfigurationOfNeoJSON;
 					versionString: #'stable';
 					repository: 'http://mc.stfx.eu/Neo' ];
-			project: 'BabyPhexample' with: [
-				spec
-					className: #ConfigurationOfBabyPhexample;
-					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo40/main/' ];
-			project: 'Magritte3' with: [
-				spec
-					className: #ConfigurationOfMagritte3;
-					versionString: #'stable';
-					repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main/' ].
+			baseline: 'BabyPhexample' with: [
+				spec repository: 'github://seandenigris/Baby-Phexample:master/repository' ];
+			baseline: 'Magritte3' with: [
+				spec repository: 'github://seandenigris/Magritte3:master/repository' ];
+			baseline: 'SimplePersistence' with: [
+				spec repository: 'github://seandenigris/Simple-Persistence:master/repository' ].
 		spec package: 'CPanel' with: [
-				spec requires: #('NeoJSON' 'BabyPhexample' 'Magritte3' ). ]. ].
+				spec requires: #('NeoJSON' 'BabyPhexample' 'Magritte3' 'SimplePersistence'). ]. ].
