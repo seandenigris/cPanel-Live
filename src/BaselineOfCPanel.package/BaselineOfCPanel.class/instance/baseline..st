@@ -4,16 +4,13 @@ baseline: spec
 
 	spec for: #'common' do: [
 		spec 
-			project: 'NeoJSON' with: [
-				spec
-					className: #ConfigurationOfNeoJSON;
-					versionString: #'stable';
-					repository: 'http://mc.stfx.eu/Neo' ];
+			baseline: 'NeoJSON' with: [
+				spec repository: 'github://svenvc/NeoJSON' ];
 			baseline: 'BabyPhexample' with: [
-				spec repository: 'github://seandenigris/Baby-Phexample:master/repository' ];
-			baseline: 'Magritte3' with: [
-				spec repository: 'github://seandenigris/Magritte3:master/repository' ];
+				spec repository: 'github://seandenigris/Baby-Phexample' ];
+			baseline: 'Magritte' with: [
+				spec repository: 'github://seandenigris/Magritte' ];
 			baseline: 'SimplePersistence' with: [
-				spec repository: 'github://seandenigris/Simple-Persistence:master/repository' ].
+				spec repository: 'github://seandenigris/Simple-Persistence' ].
 		spec package: 'CPanel' with: [
-				spec requires: #('NeoJSON' 'BabyPhexample' 'Magritte3' 'SimplePersistence'). ]. ].
+				spec requires: #('NeoJSON' 'BabyPhexample' 'Magritte' 'SimplePersistence'). ]. ].
