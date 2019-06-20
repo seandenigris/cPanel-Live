@@ -1,3 +1,3 @@
 actions
 connect
-	cPanel loginAs: self username withPassword: self password 
+	self cPanel loginAs: self username withPassword: self password 
