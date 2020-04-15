@@ -1,3 +1,3 @@
 accessing
 backupDirectoryParent
-	^ FileLocator home / 'Dynabook' / 'User Data'
+	^ FileLocator dynabookData
