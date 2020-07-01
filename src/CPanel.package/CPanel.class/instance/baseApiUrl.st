@@ -1,3 +1,3 @@
 private
 baseApiUrl
-	^ url / securityToken / 'execute'
+	^ self url / self securityToken / 'execute'
