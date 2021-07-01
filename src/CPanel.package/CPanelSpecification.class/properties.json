@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "BabyPhexample",
+	"super" : "TestCase",
 	"category" : "CPanel-Specification",
 	"classinstvars" : [ ],
 	"pools" : [ ],
