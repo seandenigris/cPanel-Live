@@ -15,4 +15,4 @@ baseline: spec
 			baseline: 'SimplePersistence' with: [
 				spec repository: 'github://seandenigris/Simple-Persistence' ].
 		spec package: 'CPanel' with: [
-				spec requires: #('BabyPhexample' 'Magritte' 'Mocketry' 'NeoJSON' 'PharoEnhancements' 'SimplePersistence'). ]. ].
+				spec requires: #('Magritte' 'Mocketry' 'NeoJSON' 'PharoEnhancements' 'SimplePersistence'). ]. ].
