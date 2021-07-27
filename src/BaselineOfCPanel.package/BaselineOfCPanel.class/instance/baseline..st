@@ -8,11 +8,16 @@ baseline: spec
 				spec repository: 'github://seandenigris/Magritte' ];
 			baseline: 'Mocketry' with: [
 				spec repository: 'github://dionisiydk/Mocketry' ];
-			baseline: 'NeoJSON' with: [
-				spec repository: 'github://svenvc/NeoJSON' ];
 			baseline: 'PharoEnhancements' with: [
 				spec repository: 'github://seandenigris/Pharo-Enhancements' ];
 			baseline: 'SimplePersistence' with: [
 				spec repository: 'github://seandenigris/Simple-Persistence' ].
 		spec package: 'CPanel' with: [
-				spec requires: #('Magritte' 'Mocketry' 'NeoJSON' 'PharoEnhancements' 'SimplePersistence'). ]. ].
+				spec requires: #('Magritte' 'Mocketry' 'PharoEnhancements' 'SimplePersistence'). ]. ].
+				
+	spec for: #notGToolkit do: [
+		spec baseline: 'NeoJSON' with: [
+				spec repository: 'github://svenvc/NeoJSON' ].
+		spec 
+			package: 'CPanel' with: [ 
+				spec requires: 'NeoJSON' ] ].
