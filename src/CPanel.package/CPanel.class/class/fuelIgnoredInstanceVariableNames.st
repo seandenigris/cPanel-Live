@@ -1,3 +1,0 @@
-fuel support
-fuelIgnoredInstanceVariableNames
-	^ #(client)

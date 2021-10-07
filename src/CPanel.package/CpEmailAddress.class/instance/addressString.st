@@ -1,3 +1,0 @@
-accessing
-addressString
-	^ addressString

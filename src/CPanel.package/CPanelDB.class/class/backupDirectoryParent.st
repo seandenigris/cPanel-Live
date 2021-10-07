@@ -1,3 +1,0 @@
-accessing
-backupDirectoryParent
-	^ FileLocator dynabookData
