@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfCPanel,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfCPanel'
+	#category : #BaselineOfCPanel
 }
 
 { #category : #baseline }
@@ -32,11 +32,13 @@ BaselineOfCPanel >> baseline: spec [
 { #category : #accessing }
 BaselineOfCPanel >> customProjectAttributes [
 	^ self isGTImage
-			ifFalse: [ #(notGToolkit) ]
 			ifTrue: [ #(GToolkit) ]
+			ifFalse: [ #(notGToolkit) ]
 ]
 
 { #category : #testing }
 BaselineOfCPanel >> isGTImage [
-	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'GToolkit-' ]
+	
+	^ RPackageOrganizer default packageNames anySatisfy: [ :pn | pn beginsWith: 'Lepiter-' ].
+	"Implementation note: used to check for GToolkit prefix, but P7 has a GToolkit-Examples package. Lepiter, OTOH, could only be loaded in a GT image"
 ]
