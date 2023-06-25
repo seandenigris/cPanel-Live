@@ -68,7 +68,7 @@ CPanelSpecification >> testEmailAddForwarderAlreadyExists [
 	targetEmail := 'target@mydomain.com'.
 	expectedUrl := url / securityToken / 'execute' / 'Email' / 'add_forwarder' ? ('email' -> sourceUser) & ('domain' -> sourceDomain) & ('fwdopt' -> 'fwd') & ('fwdemail' -> targetEmail).
 	client shouldGet: urlListingForwarders andReturn: self sampleForwardersList.
-	[ cPanel emailAddForwarderFrom: sourceEmail to: targetEmail ] should signal: CpError.
+	[ cPanel emailAddForwarderFrom: sourceEmail to: targetEmail ] should raise: CpError.
 ]
 
 { #category : #'as yet unclassified' }
@@ -77,7 +77,7 @@ CPanelSpecification >> testEmailHasForwarder [
 	| result |
 	client shouldGet: urlListingForwarders andReturn: self sampleForwardersList.
 	result := cPanel hasForwarderFrom: 'fakeaddress1@', domain to: 'target@', domain.
-	result should beTrue.
+	result should be: true.
 ]
 
 { #category : #'as yet unclassified' }
@@ -86,7 +86,7 @@ CPanelSpecification >> testEmailHasNoSuchForwarder [
 	| result |
 	client shouldGet: urlListingForwarders andReturn: self sampleForwardersList.
 	result := cPanel hasForwarderFrom: 'unknown@', domain to: 'target@', domain.
-	result should beFalse
+	result should be: false
 ]
 
 { #category : #'as yet unclassified' }
