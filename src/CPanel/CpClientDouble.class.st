@@ -5,7 +5,7 @@ Class {
 		'getExpectations',
 		'contentReader'
 	],
-	#category : 'CPanel-Specification'
+	#category : #'CPanel-Specification'
 }
 
 { #category : #'as yet unclassified' }
@@ -13,22 +13,21 @@ CpClientDouble >> contentReader: aBlock [
 	contentReader := aBlock
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 CpClientDouble >> get: aZnUrl [ 
 
-	| response |
-	(self getExpectations includesKey: aZnUrl) should beTrue.
-	response := self getExpectations at: aZnUrl.
-	self getExpectations removeKey: aZnUrl.
+	| expectation |
+	(self getExpectations first key = aZnUrl) should be: true.
+	expectation := self getExpectations removeFirst.
 	^ contentReader
-		ifNil: [ response ]
-		ifNotNil: [ contentReader value: response ]
+		ifNil: [ expectation value ]
+		ifNotNil: [ contentReader value: expectation value ]
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 CpClientDouble >> getExpectations [
-	^ getExpectations ifNil: [ getExpectations := Dictionary new ]
+	^ getExpectations ifNil: [ getExpectations := OrderedCollection new ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -37,8 +36,8 @@ CpClientDouble >> shouldGet: url [
 	self shouldGet: url andReturn: ''
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 CpClientDouble >> shouldGet: url andReturn: returnString [
 
-	self getExpectations at: url put: returnString
+	self getExpectations add: url -> returnString
 ]

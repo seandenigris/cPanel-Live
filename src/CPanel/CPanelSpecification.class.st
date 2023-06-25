@@ -9,8 +9,13 @@ Class {
 		'domain',
 		'urlListingForwarders'
 	],
-	#category : 'CPanel-Specification'
+	#category : #'CPanel-Specification'
 }
+
+{ #category : #accessing }
+CPanelSpecification >> emptyForwardersList [
+	^ '{"messages":null,"errors":null,"status":1,"metadata":{"transformed":1},"data":[]}'.
+]
 
 { #category : #'as yet unclassified' }
 CPanelSpecification >> genericResponse [
@@ -22,7 +27,7 @@ CPanelSpecification >> sampleForwardersList [
 	^ '{"messages":null,"errors":null,"status":1,"metadata":{"transformed":1},"data":[{"html_dest":"fakeaddress1@mydomain.com","dest":"fakeaddress1@mydomain.com","html_forward":"target@mydomain.com","forward":"target@mydomain.com","uri_forward":"target%40mydomain.com","uri_dest":"fakeaddress1%40mydomain.com"},{"html_dest":"fakeaddress2@mydomain.com","dest":"fakeaddress2@mydomain.com","html_forward":"target@mydomain.com","forward":"target@mydomain.com","uri_forward":"target%40mydomain.com","uri_dest":"fakeaddress2%40mydomain.com"}]}'.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 CPanelSpecification >> setUp [
 
 	url := 'https://my.domain.com/' asUrl.
@@ -32,21 +37,22 @@ CPanelSpecification >> setUp [
 	client := CpClientDouble new.
 	"Short circuit the usual creation method, which includes authentication, because it's hard to test"
 	cPanel := CPanel new
+		securityToken: securityToken;
 		client: client;
 		url: url;
-		securityToken: securityToken;
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 CPanelSpecification >> testEmailAddForwarder [
 
 	| sourceUser sourceDomain sourceEmail targetEmail expectedUrl |
-	sourceUser := 'dummyuser'.
+	sourceUser := 'fakeaddress1'.
 	sourceDomain := 'mydomain.com'.
 	sourceEmail := sourceUser, '@', sourceDomain.
 	targetEmail := 'target@mydomain.com'.
 	expectedUrl := url / securityToken / 'execute' / 'Email' / 'add_forwarder' ? ('email' -> sourceUser) & ('domain' -> sourceDomain) & ('fwdopt' -> 'fwd') & ('fwdemail' -> targetEmail).
+	client shouldGet: urlListingForwarders andReturn: self emptyForwardersList.
 	client shouldGet: expectedUrl andReturn: self genericResponse.
 	client shouldGet: urlListingForwarders andReturn: self sampleForwardersList.
 	cPanel emailAddForwarderFrom: sourceEmail to: targetEmail
