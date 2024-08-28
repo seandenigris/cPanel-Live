@@ -1,9 +1,11 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'CPanel',
-      #directory : 'src',
-      #platforms : [ #pharo ]
+      #baseline : 'cPanelLive',
+      #directory : 'repository',
+      #onConflict : #useIncoming
     }
-  ]
+  ],
+  #testing : {
+      #failOnZeroTests : false  }
 }
