@@ -10,23 +10,23 @@ BaselineOfCPanel >> baseline: spec [
 
 	spec for: #'common' do: [
 		spec 
-			baseline: 'Magritte' with: [
+			baseline: #'Magritte' with: [
 				spec repository: 'github://seandenigris/Magritte' ];
-			baseline: 'Mocketry' with: [
+			baseline: #'Mocketry' with: [
 				spec repository: 'github://dionisiydk/Mocketry' ];
-			baseline: 'PharoEnhancements' with: [
+			baseline: #'PharoEnhancements' with: [
 				spec repository: 'github://seandenigris/Pharo-Enhancements' ];
-			baseline: 'SimplePersistence' with: [
+			baseline: #'SimplePersistence' with: [
 				spec repository: 'github://seandenigris/Simple-Persistence' ].
-		spec package: 'CPanel' with: [
-				spec requires: #('Magritte' 'Mocketry' 'PharoEnhancements' 'SimplePersistence'). ]. ].
+		spec package: #'CPanel' with: [
+				spec requires: #(Magritte Mocketry PharoEnhancements SimplePersistence). ]. ].
 				
 	spec for: #notGToolkit do: [
-		spec baseline: 'NeoJSON' with: [
+		spec baseline: #'NeoJSON' with: [
 				spec repository: 'github://svenvc/NeoJSON' ].
 		spec 
-			package: 'CPanel' with: [ 
-				spec requires: 'NeoJSON' ] ].
+			package: #'CPanel' with: [ 
+				spec requires: #'NeoJSON' ] ].
 ]
 
 { #category : #accessing }
