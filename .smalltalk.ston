@@ -1,1 +1,1 @@
-SmalltalkCISpec {  #loading : [    SCIMetacelloLoadSpec {      #baseline : 'cPanelLive',      #directory : 'src',      #onConflict : #useIncoming    }  ],  #testing : {      #failOnZeroTests : false  }}
+SmalltalkCISpec {  #loading : [    SCIMetacelloLoadSpec {      #baseline : 'CPanel',      #directory : 'src',      #onConflict : #useIncoming    }  ],  #testing : {      #failOnZeroTests : false  }}
