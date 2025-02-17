@@ -19,7 +19,7 @@ Class {
 	#classInstVars : [
 		'clientClassForTesting'
 	],
-	#category : 'CPanel'
+	#category : #CPanel
 }
 
 { #category : #accessing }
@@ -194,7 +194,7 @@ CPanel >> forwardMailFrom: newEmail to: target [
 CPanel >> hasForwarderFrom: sourceEmail to: targetEmail [
 
 	| domain forwarders |
-	domain := sourceEmail cpAsEmailAddress domain.
+	domain := sourceEmail asSuEmailAddress domain.
 	forwarders := self emailListForwardersFor: domain.
 	^ forwarders anySatisfy: [ :e |
 		(e at: 'dest') = sourceEmail and: [ (e at: 'forward') = targetEmail ] ]

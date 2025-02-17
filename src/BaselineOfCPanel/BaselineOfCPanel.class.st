@@ -17,9 +17,11 @@ BaselineOfCPanel >> baseline: spec [
 			baseline: #'PharoEnhancements' with: [
 				spec repository: 'github://seandenigris/Pharo-Enhancements' ];
 			baseline: #'SimplePersistence' with: [
-				spec repository: 'github://seandenigris/Simple-Persistence' ].
+				spec repository: 'github://seandenigris/Simple-Persistence' ];
+			baseline: #'Superuser' with: [
+				spec repository: 'github://seandenigris/Superuser' ].
 		spec package: #'CPanel' with: [
-				spec requires: #(Magritte Mocketry PharoEnhancements SimplePersistence). ]. ].
+				spec requires: #(Magritte Mocketry PharoEnhancements SimplePersistence Superuser). ]. ].
 				
 	spec for: #notGToolkit do: [
 		spec baseline: #'NeoJSON' with: [
